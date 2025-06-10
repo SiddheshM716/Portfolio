@@ -28,10 +28,14 @@ const GasBackground = () => {
       speedX: number;
       speedY: number;
       color: string;
+      width: number;
+      height: number;
 
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+      constructor(width: number, height: number) {
+        this.width = width;
+        this.height = height;
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
         this.size = Math.random() * 3 + 1;
         this.speedX = Math.random() * 0.5 - 0.25;
         this.speedY = Math.random() * 0.5 - 0.25;
@@ -42,10 +46,10 @@ const GasBackground = () => {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        if (this.x > canvas.width) this.x = 0;
-        if (this.x < 0) this.x = canvas.width;
-        if (this.y > canvas.height) this.y = 0;
-        if (this.y < 0) this.y = canvas.height;
+        if (this.x > this.width) this.x = 0;
+        if (this.x < 0) this.x = this.width;
+        if (this.y > this.height) this.y = 0;
+        if (this.y < 0) this.y = this.height;
       }
 
       draw() {
@@ -62,7 +66,7 @@ const GasBackground = () => {
     const particleCount = Math.min(window.innerWidth * window.innerHeight / 10000, 100);
     
     for (let i = 0; i < particleCount; i++) {
-      particles.push(new Particle());
+      particles.push(new Particle(canvas.width, canvas.height));
     }
 
     // Animation loop
