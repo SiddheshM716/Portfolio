@@ -19,7 +19,7 @@ export default function Home() {
             className="bg-gray-800/30 backdrop-blur-md rounded-xl p-8 border border-gray-700/50"
           >
             <h1 className="text-5xl font-bold gradient-text mb-6">
-              Hi, I'm Siddhesh Mohan
+              Hi, I&apos;m Siddhesh Mohan
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               A passionate developer crafting digital experiences
@@ -208,9 +208,9 @@ export default function Home() {
             viewport={{ once: true }}
             className="bg-gray-800/30 backdrop-blur-md rounded-xl p-8 border border-gray-700/50"
           >
-            <h2 className="text-3xl font-bold gradient-text mb-4">Let's Connect</h2>
+            <h2 className="text-3xl font-bold gradient-text mb-4">Let&apos;s Connect</h2>
             <p className="text-gray-300 mb-8">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <Link
               href="/contact"
