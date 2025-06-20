@@ -191,12 +191,6 @@ const importanceColors = {
   blue: 'bg-blue-500/20 text-blue-400'
 };
 
-const categoryColors = {
-  certification: 'bg-purple-500/20 text-purple-400',
-  workshop: 'bg-green-500/20 text-green-400',
-  hackathon: 'bg-red-500/20 text-red-400'
-};
-
 const categoryTitles = {
   certification: 'Certifications',
   hackathon: 'Hackathons',
@@ -276,7 +270,7 @@ export default function CertificationsSection() {
                           ? `${importanceColors[achievement.importance]} animate-glow`
                           : 'border border-gray-700/50 hover:border-blue-500/50'}
                       `}
-                      style={achievement.highlighted ? { ['--glow-color' as any]: glowColor } : undefined}
+                      style={achievement.highlighted ? { ['--glow-color' as string]: glowColor } : undefined}
                     >
                       <div
                         className="relative aspect-[16/9] w-full bg-gray-900/50 cursor-pointer"
