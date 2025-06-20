@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --gold-color: rgba(255, 215, 0, 0.7);
+  --silver-color: rgba(192, 192, 192, 0.7);
+  --bronze-color: rgba(92, 51, 23, 0.9);
+  --blue-color: rgba(0, 123, 255, 0.7);
 }
 
 @theme inline {
@@ -31,4 +35,24 @@ body {
   background-clip: text;
   color: transparent;
   display: inline-block;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 2px var(--glow-color, rgba(255, 215, 0, 0.5)), 0 0 5px var(--glow-color, rgba(255, 215, 0, 0.3));
+  }
+  50% {
+    box-shadow: 0 0 5px var(--glow-color, rgba(255, 215, 0, 0.7)), 0 0 10px var(--glow-color, rgba(255, 215, 0, 0.5));
+  }
+  100% {
+    box-shadow: 0 0 2px var(--glow-color, rgba(255, 215, 0, 0.5)), 0 0 5px var(--glow-color, rgba(255, 215, 0, 0.3));
+  }
+}
+
+.animate-glow {
+  animation: glow 2s infinite;
+}
+
+.border-blue {
+  border-color: var(--blue-color);
 }
