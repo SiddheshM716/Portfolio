@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { projects } from './projects/data';
 import { skillsSummary } from './skills/data';
+import CertificationsSection from '../components/sections/CertificationsSection';
 
 export default function Home() {
   return (
@@ -131,6 +132,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Certifications & Achievements Section */}
+      <CertificationsSection />
 
       {/* Featured Projects Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
