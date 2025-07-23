@@ -5,12 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { projects } from './projects/data';
 import { skillsSummary } from './skills/data';
-<<<<<<< HEAD
-import CertificationsSection from '../components/sections/CertificationsSection';
-=======
-import MiniCertificationsSection from '../components/sections/MiniCertificationsSection';
->>>>>>> b217f1d
 
+import MiniCertificationsSection from '../components/sections/MiniCertificationsSection';
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -138,13 +134,7 @@ export default function Home() {
       </section>
 
       {/* Certifications & Achievements Section */}
-<<<<<<< HEAD
-      <CertificationsSection />
-=======
       <MiniCertificationsSection />
-
-      
->>>>>>> b217f1d
 
       {/* Featured Projects Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
